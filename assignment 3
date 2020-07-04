@@ -1,0 +1,592 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled",
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyPgNkOn17kCbYyxxNky+Ucb",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/12345678-ram/python-assignment-3/blob/master/assignment%203\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "nI4jApMvcOvr",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 86
+        },
+        "outputId": "d92a5e44-6089-4c14-e3af-f138b5dfd7e2"
+      },
+      "source": [
+        "#question 1\n",
+        "a=float(input(\"Enter first side:\"))\n",
+        "b=float(input(\"Enter second side:\"))\n",
+        "c=float(input(\"Enter third side:\")) \n",
+        "s=(a+b+c)/2\n",
+        "A=(s*(s-a)*(s-b)*(s-c)**0.5)\n",
+        "print(\"Area of triangle :\",A)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter first side:3\n",
+            "Enter second side:4\n",
+            "Enter third side:5\n",
+            "Area of triangle : 36.0\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "EDuZBYQegcT4",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "6876d1d3-1c0c-4c65-90ed-5029a10fb4c0"
+      },
+      "source": [
+        "#question 2\n",
+        "my_str='eye'\n",
+        "rev_str=my_str[::-1]\n",
+        "if (my_str==rev_str):\n",
+        "  print(\"palindrome\")\n",
+        "else:\n",
+        "  print(\"not a palindrome\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "palindrome\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "aCbsdhy9hMG3",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "becac792-68f3-42a9-f35a-bb6397297fa7"
+      },
+      "source": [
+        "#question 3\n",
+        "Y=int(input(\"Enter year:\"))\n",
+        "if Y%4==0:\n",
+        "    print(\"leap year\")\n",
+        "else:\n",
+        "    print(\"not a leap year:\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter year:2004\n",
+            "leap year\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "pxjo5O3sksCx",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 52
+        },
+        "outputId": "7a10a6f3-7b65-4550-998a-d644e9ed4df1"
+      },
+      "source": [
+        "#question 4\n",
+        "Str1=\"This program converts spaces into hypen\"\n",
+        "Str2=Str1.replace(' ','-')\n",
+        "Str2"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic": {
+              "type": "string"
+            },
+            "text/plain": [
+              "'This-program-converts-spaces-into-hypen'"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 23
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "9YWTh0jGsIPU",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        },
+        "outputId": "9a05b1ed-61ed-4c6f-88d4-518b3560574b"
+      },
+      "source": [
+        "#question 5\n",
+        "def rearrange(str):\n",
+        "    str_list=str.split(',')\n",
+        "    str_set=set(str_list)\n",
+        "    str_list=list(str_set)\n",
+        "    str_list.sort()\n",
+        "    str=','.join(str_list)\n",
+        "    return str\n",
+        "str=input(\"Enter a string :\")\n",
+        "print(rearrange(str))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a string :orange,white,red,cyan,green,mangeta,cyan,pink,white\n",
+            "cyan,green,mangeta,orange,pink,red,white\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "pEZB4GYXyGh3",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "f3f21728-f9ff-45b3-ecff-e8ebee2de9a5"
+      },
+      "source": [
+        "#question 6\n",
+        "sal=int(input(\"Enter total salary:\"))\n",
+        "if sal<=250000:\n",
+        "   print(\"no tax\")\n",
+        "elif 250001<=sal<=500000:\n",
+        "   print(\"tax=\",sal*.05)\n",
+        "elif 500001<=sal<=750000:\n",
+        "   print(\"tax=\",sal*.10)\n",
+        "elif 750001<=sal<=1000000:\n",
+        "   print(\"tax=\",sal*.15)\n",
+        "elif 1000001<=sal<=1250000:\n",
+        "   print(\"tax=\",sal*.20)\n",
+        "elif 1250001<=sal<=1500000:\n",
+        "   print(\"tax=\",sal*.25)\n",
+        "else:\n",
+        "   print(\"tax=\",sal*.30)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter total salary:25000\n",
+            "no tax\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "zNrejzCZ1D-F",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "d6bfa471-ad6a-4d35-de1c-7c25bd91c9ac"
+      },
+      "source": [
+        "#question 7\n",
+        "Lst=[11,33,50]\n",
+        "for i in Lst:\n",
+        "  print(i,end='')"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "113350"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "r5Ru3TX4pr0U",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 103
+        },
+        "outputId": "c38a91cb-37e1-44c7-94ae-1e9bc6ea5a6a"
+      },
+      "source": [
+        "#question 8\n",
+        "Days=int(input(\"Enter numbers of days:\"))*86400\n",
+        "Hours=int(input(\"Enter number of hours:\"))*3600\n",
+        "Min=int(input(\"Enter number of minutes:\"))*60\n",
+        "Sec=int(input(\"Enter number of seconds :\"))*60\n",
+        "Totalsec=Days+Hours+Min+Sec\n",
+        "print(\"Total number of seconds :\",Totalsec)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter numbers of days:2\n",
+            "Enter number of hours:3\n",
+            "Enter number of minutes:30\n",
+            "Enter number of seconds :50\n",
+            "Total number of seconds : 188400\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "_ewRVUJMsOrf",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "54f993fd-3751-4261-8fbc-05191b7a2c98"
+      },
+      "source": [
+        "#question 9\n",
+        "Lst=[12,2,5]\n",
+        "print(\"Maximum of 12,2,5 is:\",end=\" \")\n",
+        "print(max(12,2,5))\n",
+        "print(\"Minimum of 12,2,5 is:\",end=\" \")\n",
+        "print(min(12,2,5))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Maximum of 12,2,5 is: 12\n",
+            "Minimum of 12,2,5 is: 2\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "9XjNGYTVodMA",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 106
+        },
+        "outputId": "079e2ac1-33b7-41e1-ce34-24e144b1c9b0"
+      },
+      "source": [
+        "#question 10\n",
+        "Year=int(input(\"Enter Year:\"))\n",
+        "Month=int(input(\"Enter Month:\"))\n",
+        "Date=int(input(\"Enter Date:\"))\n",
+        "if Year%4==0:\n",
+        "    LeapYear=True\n",
+        "else:\n",
+        "    LeapYear=False\n",
+        "if Month==2:\n",
+        "    if LeapYear:\n",
+        "      Month_length==29\n",
+        "    else:\n",
+        "      Month_length==28\n",
+        "elif Month in (4,6,9,10):\n",
+        "      Month_length=30\n",
+        "else:\n",
+        "      Month_length=31\n",
+        "if Date<Month_length:\n",
+        "      Date=Date+1\n",
+        "else:\n",
+        "      Date=1\n",
+        "print(f\"successor date is [YYY-MM-DD]:{Year}-{Month}-{Date}\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter Year:2020\n",
+            "Enter Month:5\n",
+            "Enter Date:30\n",
+            "successor date is [YYY-MM-DD]:2020-5-31\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "65Zm68kny3mV",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "afb75bf6-e51d-4eca-a605-7ff4973754d0"
+      },
+      "source": [
+        "#question 11\n",
+        "def product_num(n1,n2,n3,n4,n5,n6,n7,n8):\n",
+        "  return n1*n2*n3*n4*n5*n6*n7*n8\n",
+        "product_num(45,3,2,89,72,1,10,7)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "121111200"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 36
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "NdfF7gsxzmu8",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "80deecd7-a777-4e6a-d42f-37612134b0ce"
+      },
+      "source": [
+        "#question 12\n",
+        "def Num_list(n1,n2,n3,n4,n5,n6):\n",
+        "    return n1+n2,n2+n3,n3+n4,n4+n5,n5+n6\n",
+        "Num_list(5,6,8,34,89,1)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(11, 14, 42, 123, 90)"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 39
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "9QI-n_iH0pz5",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "a3a9a76e-a521-4665-a8e1-61d876d75be7"
+      },
+      "source": [
+        "#question 13\n",
+        "def Num_tuple(n1,n2,n3,n4,n5,n6):\n",
+        "    return n1,n1*n2,n1*n2*n3,n1*n2*n3*n4,n1*n2*n3*n4*n5,n1*n2*n3*n4*n5*n6\n",
+        "Num_tuple(5,6,8,3,9,1)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(5, 30, 240, 720, 6480, 6480)"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 42
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "2v65xE9yt2fS",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "32976bbb-22d3-4ac3-ef8c-a1070f3ccb0d"
+      },
+      "source": [
+        "#question 14\n",
+        "q=int(input(\"Enter a number:\"))\n",
+        "newlist=[]\n",
+        "for i in str(q):\n",
+        "    newlist.append(int(i))\n",
+        "print(newlist)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a number:586392\n",
+            "[5, 8, 6, 3, 9, 2]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "POLKcfRcEZyN",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "0b6f2038-27e2-475c-fa5b-a72c1cf6c951"
+      },
+      "source": [
+        "#question15\n",
+        "def subpalindromecheck(string):\n",
+        "    palindrome=1\n",
+        "    palindrome=0\n",
+        "    for i in range(0,len(string)):\n",
+        "        for j in range(i+1,len(string)):\n",
+        "            if string[i:j] == string[j:i:-1]:\n",
+        "                if len(string[i:j])>palindrome:\n",
+        "                    palindrome=len(string[i:j])\n",
+        "                    palindromestring=(string[i:j+1])\n",
+        "                    palindrome=1\n",
+        "    if palindrome:\n",
+        "        return palindromestring\n",
+        "    else:\n",
+        "        return \"No string palindrome\"\n",
+        "string=input('Enter a string: ')\n",
+        "print(subpalindromecheck(string))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a string: sirmam\n",
+            "mam\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "7le1UdphQ8f4",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 89
+        },
+        "outputId": "7da0cf79-ddcb-4ca7-9e5a-e2792c5acf7e"
+      },
+      "source": [
+        "#question16\n",
+        "def substringcheck(str1,str2):\n",
+        "    str1len=len(str1)\n",
+        "    test=0\n",
+        "    for i in range(0,str1len):\n",
+        "        if str1[i:i+len(str2)]==str2:\n",
+        "            test=1\n",
+        "    return test\n",
+        "a=input('Enter a binary number a: ')\n",
+        "b=input('Enter another binary number b: ')\n",
+        "if substringcheck(a,b):\n",
+        "    print('b is a substring of a')\n",
+        "else:\n",
+        "    print('b is not a substring of a')"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a binary number a: 10010\n",
+            "Enter another binary number b: 10110\n",
+            "b is not a substring of a\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
